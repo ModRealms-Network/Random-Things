@@ -34,18 +34,17 @@ public class TileEntityEnderAnchor extends TileEntityBase implements ITickable
 			if (firstTick)
 			{
 				firstTick = false;
-
-				if (chunkTicket == null && Features.ENDER_ANCHOR_CHUNKLOADING)
-				{
-					chunkTicket = ForgeChunkManager.requestTicket(RandomThings.instance, this.world, Type.NORMAL);
-					if (chunkTicket != null)
-					{
-						ForgeChunkManager.forceChunk(chunkTicket, this.world.getChunkFromBlockCoords(this.pos).getPos());
-						chunkTicket.getModData().setInteger("posX", this.pos.getX());
-						chunkTicket.getModData().setInteger("posY", this.pos.getY());
-						chunkTicket.getModData().setInteger("posZ", this.pos.getZ());
-					}
-				}
+//				if (chunkTicket == null && Features.ENDER_ANCHOR_CHUNKLOADING)
+//				{
+//					chunkTicket = ForgeChunkManager.requestTicket(RandomThings.instance, this.world, Type.NORMAL);
+//					if (chunkTicket != null)
+////					{
+//						ForgeChunkManager.forceChunk(chunkTicket, this.world.getChunkFromBlockCoords(this.pos).getPos());
+//						chunkTicket.getModData().setInteger("posX", this.pos.getX());
+//						chunkTicket.getModData().setInteger("posY", this.pos.getY());
+//						chunkTicket.getModData().setInteger("posZ", this.pos.getZ());
+//					}
+//				}
 			}
 		}
 	}

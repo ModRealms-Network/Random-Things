@@ -172,8 +172,7 @@ public class RTEventHandler
 	@SubscribeEvent
 	public void chunkLoad(ChunkEvent.Load event)
 	{
-		if (event.getWorld().isRemote)
-			SpectreIlluminationClientHandler.loadChunk(event.getChunk());
+//		if (event.getWorld().isRemote) SpectreIlluminationClientHandler.loadChunk(event.getChunk());
 	}
 
 	@SubscribeEvent

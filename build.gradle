@@ -48,7 +48,6 @@ minecraft {
     
     replaceIn "lib/Reference.java"
     replace "@VERSION@",project.version
-	replace "@FINGERPRINT@", project.signSHA1
     
     useDepAts = true
 }
@@ -94,21 +93,3 @@ processResources
     // Copy Access Transformer
     rename '(.+_at.cfg)', 'META-INF/$1'
 }
-
-task signJar(type: SignJar, dependsOn: reobfJar) {
-
-    // Skips if the keyStore property is missing.
-    onlyIf {
-        project.hasProperty('keyStore')
-    }
-
-    keyStore = project.keyStore
-    alias = project.keyStoreAlias
-    storePass = project.keyStorePass
-    keyPass = project.keyStoreKeyPass
-    inputFile = jar.archivePath
-    outputFile = jar.archivePath
-}
-
-// Runs this task automatically when build is ran. 
-build.dependsOn signJar

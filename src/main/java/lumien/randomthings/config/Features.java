@@ -13,7 +13,7 @@ public class Features
 	public static boolean ARTIFICIAL_END_PORTAL = true;
 
 	@ConfigOption(category = "features", name = "EnderAnchorChunkloading", comment = "Should Ender Anchors keep the Chunk they are in loaded")
-	public static boolean ENDER_ANCHOR_CHUNKLOADING = true;
+	public static boolean ENDER_ANCHOR_CHUNKLOADING = false;
 
 	@ConfigOption(category = "visual", name = "FlatRunes", comment = "Replaces the noisy default rune texture with a flat version")
 	public static boolean FLAT_RUNES = false;
